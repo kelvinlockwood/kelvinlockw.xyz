@@ -5,7 +5,22 @@ module.exports = {
       center: true,
       padding: '2rem',
     },
-    extend: {},
+    extend: {
+      colors: {
+        myred: {
+          500: '#c44356',
+          800: '#8b323f',
+        },
+        mydark: {
+          100: '#232d2c',
+          300: '#182624',
+          500: '#14211e',
+        },
+        mygray: {
+          500: '#313E3D',
+        },
+      },
+    },
   },
   variants: {
     extend: {},
@@ -14,9 +29,5 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('tailwindcss-debug-screens'),
   ],
-  purge: [
-    './src/**/*.js',
-    './src/**/*.njk',
-    './src/**/*.svg',
-  ],
+  purge: ['./src/**/*.js', './src/**/*.njk', './src/**/*.svg'],
 }

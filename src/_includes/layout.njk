@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/main.bundle.css">
-  <script src="/assets/main.bundle.js" defer></script>
-  <title>{{ title }} | TEA Stack</title>
-  {% block head %}{% endblock %}
-</head>
-<body class="{{ 'debug-screens' if env.devMode }}">
-  {% include 'header.njk' %}
-  {% block body %}
-    <div class="container py-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/main.bundle.css" />
+    <script src="/assets/main.bundle.js" defer></script>
+    <title>{{ title }} | TEA Stack</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body
+    class="mt-20 text-white bg-mydark-500 {{ 'debug-screens' if env.devMode }}"
+  >
+    {% include 'header.njk' %} 
+    {% if banner %}
+      {% include "banner.njk" %}
+    {% endif %}
+    {% block body %}
+    <div class="py-8">
       {{ content | safe }}
     </div>
-  {% endblock %}
-</body>
+    {% endblock %}
+    <footer
+      class="text-gray-400 bg-mydark-500 body-font"
+      style="
+        background-image: url('/images/home/Artboard\ 1@2x.png');
+        background-size: cover;
+        background-blend-mode: soft-light;
+      "
+    >
+      <div
+        class="container w-full sm:w-8/12 mx-auto flex px-5 py-10 md:flex-row flex-col items-center"
+      >
+        <div
+          class="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+        >
+          <div class="flex items-center py-2">
+            <small class="mx-1">Check out my work</small>
+          </div>
+          <h1 class="title-font sm:text-4xl text-xl mb-4 font-black text-white">
+            Lapenori yupe nelitionor
+          </h1>
+          <p class="leading-relaxed text-base">
+            Ac odio tempor orci dapibus ultrices in. Posuere urna nec tincidunt
+            praesent semper feugiat nibh. Massa sed elementum tempus.
+          </p>
+          <button
+            class="bg-myred-500 rounded-lg text-white px-4 py-2 mt-10 w-1/2"
+          >
+            Check it out!
+          </button>
+        </div>
+        <div class="w-full md:w-full">
+          <div class="bg-mydark-100 h-80 rounded-3xl"></div>
+        </div>
+      </div>
+
+      <div class="bg-opacity-75">
+        <div
+          class="px-5 py-3 mx-auto flex items-center sm:flex-row flex-col justify-between"
+        >
+          <a
+            class="flex font-medium items-center md:justify-start justify-center text-white"
+          >
+            <span class="ml-3">Kelvin Lockwood | 2021</span>
+          </a>
+
+          <span class="inline-flex sm:mt-0 mt-4 justify-between items-center">
+            <a class="text-gray-400 mx-3">
+              <img src="/images/icons/bxl-github.svg" alt="github" />
+            </a>
+            <a class="text-gray-400 mx-3">
+              <img src="/images/icons/bxl-twitter.svg" alt="twitter" />
+            </a>
+            <a class="text-gray-400 mx-3">
+              <img src="/images/icons/bxs-paper-plane.svg" alt="telegram" />
+            </a>
+          </span>
+          <div class="tracking-tight">⚪⚪⚪</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,12 +1,13 @@
-<nav class="bg-gray-100">
-  <div class="container py-4 space-x-2">
-    {% for item in navigation %}
-      <a
-        class="{{ 'font-black' if page.url == item.route }}"
-        href="{{ item.route }}"
-      >
-        {{ item.name }}
+<nav class="bg-mydark-500 flex justify-between align-middle p-4 fixed w-full top-0">
+    <a class="block title-font text-xl w-1/12 text-right" href="/">
+   Kelvin Lockwood  
+    </a>
+    <div class="flex items-center">
+    {% for item in collections.all | eleventyNavigation %}
+      <a class="mx-2 {{ 'font-black' if page.url == item.url }}"
+        href="{{ item.url | url }}">
+        {{ item.title }}
       </a>
     {% endfor %}
-  </div>
+    </div>
 </nav>

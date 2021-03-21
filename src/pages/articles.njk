@@ -1,0 +1,56 @@
+---
+title: Articles
+layout: layout.njk
+eleventyNavigation:
+  key: Articles
+  order: 1
+banner:
+  title: Articles 
+  subtitle: Here are some of the articles I wrote. Blaperi floco shotine marine tanterios
+---
+
+{% block body %}
+<main class="w-full bg-mydark-300 flex justify-center">
+  <section
+    class="container sm:w-8/12 mx-auto w-full m-0 flex items-center justify-center"
+  >
+    <div class="pt-5">
+      <div class="md:w-3/4 flex flex-col items-start">
+        <div class="flex items-center justify-center">
+          <img class="w-3" src="/images/icons/bxs-pencil.svg" alt="link" />
+          <span
+            class="py-1 px-2 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest"
+          >
+            17 Feb 2021
+          </span>
+        </div>
+        <h2
+          class="sm:text-2xl text-xl title-font font-medium text-white mt-1 mb-4"
+        >
+          Saving Your Web Workflows with Prototyping
+        </h2>
+        <p class="leading-relaxed mb-5">
+          A brilliant post by Matthias Ott on common UI and design / engineering
+          problems and how trying to solve them is often a greater lesson than
+          only learning about a new technology. “Learning comes from exploring
+          the problem space and trying different possible tradeoffs.”
+        </p>
+        <div
+          class="flex items-center flex-wrap border-b-2 border-gray-800 border-opacity-75 mb-5 mt-auto w-full"
+        >
+          <span
+            class="mr-4 py-1 px-2 bg-mygray-500 rounded-xl text-gray-200 text-opacity-75 text-xs font-medium tracking-widest"
+          >
+            technology
+          </span>
+          <span
+            class="mr-4 py-1 px-2 bg-mygray-500 rounded-xl text-gray-200 text-opacity-75 text-xs font-medium tracking-widest"
+          >
+            ui-ux
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
