@@ -8,15 +8,12 @@
     <title>{{ title }} | TEA Stack</title>
     {% block head %}{% endblock %}
   </head>
-  <body
-    class="mt-20 text-white bg-mydark-500 {{ 'debug-screens' if env.devMode }}"
-  >
-    {% include 'header.njk' %} 
-    {% if banner %}
-      {% include "banner.njk" %}
-    {% endif %}
-    {% block body %}
-    <div class="py-8">
+  <body class="text-white bg-mydark-500 {{ 'debug-screens' if env.devMode }}">
+    {% include 'header.njk' %} {% if banner %} {% include "banner.njk" %} {%
+    endif %} {% block body %}
+    <div
+      class="py-8 m-0 w-full bg-mydark-300 {% if container %} px-48 {% endif %}"
+    >
       {{ content | safe }}
     </div>
     {% endblock %}
@@ -45,7 +42,7 @@
             praesent semper feugiat nibh. Massa sed elementum tempus.
           </p>
           <button
-            class="bg-myred-500 rounded-lg text-white px-4 py-2 mt-10 w-1/2"
+            class="bg-myred-500 rounded-lg text-white hover:bg-white hover:text-myred-500 px-4 py-2 mt-10 w-1/2"
           >
             Check it out!
           </button>
@@ -80,5 +77,44 @@
         </div>
       </div>
     </footer>
+    <script defer>
+      if (window.ResizeObserver) {
+        const progress = document.getElementById('reading-progress');
+
+        let timeOfLastScroll = 0;
+        let requestedAniFrame = false;
+        function scroll() {
+          if (!requestedAniFrame) {
+            requestAnimationFrame(updateProgress);
+            requestedAniFrame = true;
+          }
+          timeOfLastScroll = Date.now();
+        }
+        addEventListener('scroll', scroll);
+
+        let winHeight = 1000;
+        let bottom = 10000;
+        function updateProgress() {
+          requestedAniFrame = false;
+          const percent = Math.min(
+            (document.scrollingElement.scrollTop / (bottom - winHeight)) * 100,
+            100
+          );
+          progress.style.transform = `translate(-${100 - percent}vw, 0)`;
+          if (Date.now() - timeOfLastScroll < 3000) {
+            requestAnimationFrame(updateProgress);
+            requestedAniFrame = true;
+          }
+        }
+
+        new ResizeObserver(() => {
+          bottom =
+            document.scrollingElement.scrollTop +
+            document.querySelector('footer').getBoundingClientRect().top;
+          winHeight = window.innerHeight;
+          scroll();
+        }).observe(document.body);
+      }
+    </script>
   </body>
 </html>

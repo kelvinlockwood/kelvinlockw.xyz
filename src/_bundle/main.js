@@ -1,9 +1,9 @@
 // CSS
-import './main.pcss'
+import './main.pcss';
 
-// JS
-import 'alpinejs'
-import 'turbolinks'
-import Turbolinks from 'turbolinks'
+// // JS
+// import 'alpinejs'
+// import 'turbolinks'
+// import Turbolinks from 'turbolinks'
 
-Turbolinks.start()
+// Turbolinks.start()

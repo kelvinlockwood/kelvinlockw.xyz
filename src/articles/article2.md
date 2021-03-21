@@ -1,14 +1,14 @@
 ---
-title: Magna etiam tempor orci eu lino loborti na lapa di toli
-layout: layout.njk
+title: an interesting title
+layout: layouts/article.njk
+date: 2018-01-02
 banner:
-  title: Magna etiam tempor orci eu lino loborti na lapa di toli
-  subtitle: Tellus elementum sagittis vitae et leo duis ut diam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
+  description: Tellus elementum sagittis vitae et leo duis ut diam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
+tags:
+  - ui
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ut cum,
-nostrum porro, molestiae voluptates nam neque placeat aliquid saepe quod
-blanditiis eligendi ab illo ad corrupti ex culpa velit aspernatur
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ut cum,nostrum porro, molestiae voluptates nam neque placeat aliquid saepe quod blanditiis eligendi ab illo ad corrupti ex culpa velit aspernatur
 accusamus dolorum quae natus. Dolor consectetur ut autem sit, atque,
 corporis cupiditate praesentium harum placeat, odit dolore explicabo? Ea
 eos repellat dignissimos, ex maxime non officiis doloribus eius sit a
