@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ac36cfb4-3b47-4524-a42b-3c9c953f18a0/deploy-status)](https://app.netlify.com/sites/pedantic-sinoussi-3efb9c/deploys)
+
 # eleventy-high-performance-blog
 
 A starter repository for building a blog with the [Eleventy static site generator](https://www.11ty.dev/) implementing a wide range of performance best practices.
