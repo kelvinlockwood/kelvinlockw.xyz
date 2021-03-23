@@ -1,7 +1,7 @@
 {
-  "name": "tea-stack",
+  "name": "kelvinlockw.xyz",
   "version": "1.0.0",
-  "description": "A starter template for the TEA stack.",
+  "description": "Kelvin Lockwood Personal Site",
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all dev:*",
@@ -12,10 +12,6 @@
     "dev": "npm-run-all clean -p build:* -p dev:*",
     "dev:eleventy": "eleventy --serve --quiet",
     "dev:webpack": "webpack --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mattwaler/tea-stack.git"
   },
   "prettier": {
     "semi": true,
@@ -31,10 +27,6 @@
   ],
   "author": "Matt Waler",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mattwaler/tea-stack/issues"
-  },
-  "homepage": "https://github.com/mattwaler/tea-stack#readme",
   "dependencies": {
     "alpinejs": "^2.8.0",
     "turbolinks": "^5.2.0",
