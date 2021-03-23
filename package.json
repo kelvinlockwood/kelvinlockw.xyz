@@ -4,6 +4,7 @@
   "description": "A starter template for the TEA stack.",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all dev:*",
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
     "build:eleventy": "eleventy",
     "build:webpack": "webpack",

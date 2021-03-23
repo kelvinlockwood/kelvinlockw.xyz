@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/main.bundle.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/main.bundle.css"/>
     <script src="/assets/main.bundle.js" defer></script>
     <title>{{ title }} | TEA Stack</title>
     {% block head %}{% endblock %}
   </head>
   <body class="text-white bg-mydark-500 {{ 'debug-screens' if env.devMode }}">
-    {% include 'header.njk' %} {% if banner %} {% include "banner.njk" %} {%
-    endif %} {% block body %}
-    <div
-      class="py-8 m-0 w-full bg-mydark-300 {% if container %} px-48 {% endif %}"
+    {% include 'header.njk' %}
+    {% if banner %}
+      {% include "banner.njk" %}
+    {% endif %}
+    {% block body %}
+      <div
+      class="py-8 m-0 bg-mydark-300"
     >
-      {{ content | safe }}
-    </div>
+        {% if page.url == '/pages/about/' %}
+          <div class=" markdown container max-w-6xl">
+            {{ content | safe }}
+          </div>
+        {% endif %}
+        {% if page.url != '/pages/about/' %}
+          {{ content | safe }}
+        {% endif %}
+      </div>
     {% endblock %}
     <footer
       class="text-gray-400 bg-mydark-500 body-font"
@@ -41,11 +51,12 @@
             Ac odio tempor orci dapibus ultrices in. Posuere urna nec tincidunt
             praesent semper feugiat nibh. Massa sed elementum tempus.
           </p>
-          <button
-            class="bg-myred-500 rounded-lg text-white hover:bg-white hover:text-myred-500 px-4 py-2 mt-10 w-1/2"
+          <a
+          href="/pages/products"
+            class="button w-1/2"
           >
             Check it out!
-          </button>
+          </a>
         </div>
         <div class="w-full md:w-full">
           <div class="bg-mydark-100 h-80 rounded-3xl"></div>
@@ -64,13 +75,13 @@
 
           <span class="inline-flex sm:mt-0 mt-4 justify-between items-center">
             <a class="text-gray-400 mx-3">
-              <img src="/images/icons/bxl-github.svg" alt="github" />
+              <img src="/images/icons/bxl-github.svg" alt="github"/>
             </a>
             <a class="text-gray-400 mx-3">
-              <img src="/images/icons/bxl-twitter.svg" alt="twitter" />
+              <img src="/images/icons/bxl-twitter.svg" alt="twitter"/>
             </a>
             <a class="text-gray-400 mx-3">
-              <img src="/images/icons/bxs-paper-plane.svg" alt="telegram" />
+              <img src="/images/icons/bxs-paper-plane.svg" alt="telegram"/>
             </a>
           </span>
           <div class="tracking-tight">⚪⚪⚪</div>
@@ -78,7 +89,7 @@
       </div>
     </footer>
     <script defer>
-      if (window.ResizeObserver) {
+      if (window.ResizeObserver && document.getElementById('reading-progress')) {
         const progress = document.getElementById('reading-progress');
 
         let timeOfLastScroll = 0;
@@ -96,11 +107,8 @@
         let bottom = 10000;
         function updateProgress() {
           requestedAniFrame = false;
-          const percent = Math.min(
-            (document.scrollingElement.scrollTop / (bottom - winHeight)) * 100,
-            100
-          );
-          progress.style.transform = `translate(-${100 - percent}vw, 0)`;
+          const percent = Math.min((document.scrollingElement.scrollTop / (bottom - winHeight)) * 100, 100);
+          progress.style.transform = `translate(-${ 100 - percent}vw, 0)`;
           if (Date.now() - timeOfLastScroll < 3000) {
             requestAnimationFrame(updateProgress);
             requestedAniFrame = true;
@@ -108,9 +116,10 @@
         }
 
         new ResizeObserver(() => {
-          bottom =
-            document.scrollingElement.scrollTop +
-            document.querySelector('footer').getBoundingClientRect().top;
+          bottom = document.scrollingElement.scrollTop + document
+            .querySelector('footer')
+            .getBoundingClientRect()
+            .bottom;
           winHeight = window.innerHeight;
           scroll();
         }).observe(document.body);

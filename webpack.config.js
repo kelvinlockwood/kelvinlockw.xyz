@@ -8,7 +8,11 @@ module.exports = {
     rules: [
       {
         test: /\.pcss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?url=false',
+          'postcss-loader',
+        ],
       },
     ],
   },
