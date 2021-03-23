@@ -8,7 +8,6 @@ tags:
 image: https://cdn.pixabay.com/photo/2020/08/30/20/54/rice-field-5530707_1280.jpg
 layout: layouts/article.njk
 banner:
-  title: Magna etiam tempor orci eu lino loborti na lapa di toli
   description: Tellus elementum sagittis vitae et leo duis ut diam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus.
 ---
 

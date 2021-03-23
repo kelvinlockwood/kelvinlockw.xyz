@@ -4,7 +4,7 @@
   "description": "Kelvin Lockwood Personal Site",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all dev:*",
+    "start": "npm run dev",
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
     "build:eleventy": "eleventy",
     "build:webpack": "webpack",
