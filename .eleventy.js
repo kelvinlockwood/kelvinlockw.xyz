@@ -1,7 +1,7 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 // const pluginRss = require('@11ty/eleventy-plugin-rss')
-const markdownItAnchor = require('markdown-it-anchor');
+// const markdownItAnchor = require('markdown-it-anchor');
 
 const formatYear = new Intl.DateTimeFormat('en', { year: 'numeric' });
 const formatMonth = new Intl.DateTimeFormat('en', { month: 'short' });
