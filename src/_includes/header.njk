@@ -1,0 +1,25 @@
+<nav
+  class="bg-mydark-500 flex justify-between align-middle p-4 sticky w-full top-0"
+>
+  <a class="block title-font text-xl w-1/12 text-right" href="/">
+    Kelvin Lockwood
+  </a>
+  <div class="flex items-center">
+    {% for item in collections.all | eleventyNavigation %}
+      <a
+      class="mx-2 {{ 'font-black' if page.url == item.url }}"
+      href="{{ item.url | url }}"
+    >
+        {{ item.title }}
+      </a>
+    {% endfor %}
+  </div>
+  {# {% if page
+    .url
+    .indexOf('/articles/') == 0 %} #}
+  <div
+    id="reading-progress"
+    class="-left-4 bottom-0 h-0.5 w-screen absolute bg-myred-500"
+  ></div>
+  {# {% endif %} #}
+</nav>

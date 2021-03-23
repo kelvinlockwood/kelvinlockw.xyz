@@ -1,0 +1,13 @@
+/* Custom Base Styles Go Here. */
+li {
+  position: relative;
+  left: 26px;
+}
+li::before {
+  content: url(/images/icons/bx-arrow.svg);
+  margin-left: -26px;
+  @apply absolute left-0 top-0;
+}
+li + li {
+  @apply mt-4;
+}

@@ -1,0 +1,50 @@
+---
+title: Notes
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Notes
+  order: 3
+banner:
+  description: Here are some of my references. These links are here because they helped me on my work!
+---
+
+{% block body %}
+  <main class="w-full bg-mydark-300 flex justify-center">
+    <section
+    class="container sm:w-8/12 mx-auto w-full m-0 flex items-center justify-center"
+  >
+      <div class="pt-5">
+        {%- for note in notes -%}
+          <div class="md:w-3/4 flex flex-col items-start">
+            <div class="flex items-center justify-center">
+              <img class="w-3" src="/images/icons/bx-link.svg" alt="link"/>
+              <a
+              href="http://{{ note.url }}" target="_blank"
+            class="py-1 px-2 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest"
+          >
+                {{ note.url }}
+              </a>
+            </div>
+            <h2
+          class="sm:text-2xl text-xl title-font font-medium text-white mt-1 mb-4"
+        >
+              {{ note.title }}
+            </h2>
+            <p class="leading-relaxed mb-5">
+              {{ note.description }}
+            </p>
+            <div class="flex items-center flex-wrap mb-5 mt-auto w-full">
+              {% for tag in note.tags | displayTags %}
+                <span
+            class="mr-4 py-1 px-2 bg-mygray-500 rounded-xl text-gray-200 text-opacity-75 text-xs font-medium tracking-widest"
+          >
+                  {{ tag }}
+                </span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+{% endblock %}
