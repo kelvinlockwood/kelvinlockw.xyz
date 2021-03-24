@@ -1,11 +1,12 @@
 module.exports = [
   {
-    title: 'Frankly Books',
+    title: 'Frankly Books - ui',
     subtitle: 'Book Marketplace',
     details: '2021 - Product Creation',
     description:
       'DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.',
-    features: [
+    tags: [
+      'ui',
       'DIY tote bag drinking ',
       'DIY tote bag drinking ',
       'DIY tote bag drinking ',
@@ -19,7 +20,7 @@ module.exports = [
     details: '2021 - Product Creation',
     description:
       'DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.',
-    features: [
+    tags: [
       'DIY tote bag drinking ',
       'DIY tote bag drinking ',
       'DIY tote bag drinking ',

@@ -1,11 +1,11 @@
 <section class="bg-mydark-500  w-full  py-10">
-<div class="container w-8/12 "> 
-  <h1 class="sm:text-5xl text-3xl title-font font-black text-white my-4">
-  {% if banner.title==null %}
-    {{title}}
-  {% endif %}
-    {{ banner.title }}
-  </h1>
-  <p class="mb-4 text-gray-300">{{ banner.description }}</p>
-</div>
+  <div class="container w-8/12 ">
+    <h1 class="sm:text-5xl text-3xl title-font font-black text-white my-4">
+      {% if banner.title == null %}
+        {{title}}
+      {% endif %}
+      {{ banner.title }}
+    </h1>
+    <p class="mb-4 text-gray-300">{{ banner.description }}</p>
+  </div>
 </section>

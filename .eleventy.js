@@ -58,6 +58,16 @@ module.exports = (config) => {
       (tag) => ['all', 'nav', 'note', 'article'].indexOf(tag) === -1
     );
   });
+  config.addNunjucksFilter('byTag', function (collection, tag) {
+    // should match the list in tags.njk
+    return (collection || []).filter((i) =>
+      i.tags.some((t) => t.toLowerCase() == tag.toLowerCase())
+    );
+  });
+  config.addCollection('myCollectionName', function (collectionApi) {
+    // get unsorted items
+    return collectionApi.getAll();
+  });
 
   return {
     templateFormats: ['md', 'njk', 'html'],

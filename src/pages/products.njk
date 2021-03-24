@@ -10,32 +10,8 @@ banner:
   order: 1 #}
 {% block body %}
 <section class="w-full py-4 bg-mydark-300 flex flex-col items-center  justify-center">
-{% for product in products %}
-  
-<div class="p-4 bg-mydark-500 rounded-xl md:w-2/3 md:max-w-5xl w-full mb-5">
-        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left p-3">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-1/2 h-80 object-cover object-center sm:mb-0 mb-4" src="{{ product.image }}">
-          <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-xl text-white">{{ product.title }}</h2>
-            <h3 class="text-gray-300 font-medium">{{ product.subtitle }}</h3>
-            <h4 class="text-gray-300 font-light mb-3">{{ product.details }}</h4>
-            <p class="mb-4 text-gray-400">{{ product.description }}
-            <ul class="tracking-wide text-gray-400 mb-5">
-              {% for item in product.features %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-            </p>
-            <a
-            href="{{ product.url }}" target='_blank'
-            class="button"
-          >
-            Visit Project
-          </a>
-          </div>
-        </div>
-      </div>
-{% endfor %}
 
+        {% set productList = products %}
+        {% include "components/productList.njk" %}
 </section>
 {% endblock %}

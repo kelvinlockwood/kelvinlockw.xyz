@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - article
+eleventyComputed:
+  title: Tagged “{{ tag }}” 
+banner:
+  description: collection of articles notes and products
+permalink: /tags/{{ tag }}/
+---
+{% block body %}
+  <main class="w-full bg-mydark-300 flex justify-center">
+    <section
+    class="container sm:w-8/12 mx-auto w-full m-0 flex items-center justify-center"
+  >
+      <div class="pt-5">
+        {% set articleList = collections[tag] %}
+        {% include "components/articleList.njk" %}
+        <div class="border-b-2 border-mygray-500 my-5"></div>
+        {% set noteList = notes | byTag(tag) %}
+        {% include "components/noteList.njk" %}
+        <div class="border-b-2 border-mygray-500 my-5"></div>
+        {% set productList = products | byTag(tag) %}
+        {% include "components/productList.njk" %}
+      </div>
+    </section>
+  </main>
+
+{% endblock %}

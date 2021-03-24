@@ -5,8 +5,8 @@ layout: layouts/base.njk
 {% block body %}
   <main class="w-full bg-mydark-300 flex justify-center ">
     <section class="container justify-center lg:w-8/12 flex flex-col lg:flex-row mx-auto w-full m-0  py-10">
-      <div class="w-full flex justify-between lg:justify-start lg:flex-col text-center mb-5 flex-shrink pr-12 text-sm">
-        <div class="flex flex-col border-b-4 border-mygray-500 pb-5">
+      <div class="flex justify-between lg:justify-start lg:flex-col text-center mb-5 flex-grow pr-12 text-sm">
+        <div class="flex flex-col pb-5">
           <span class="my-2 text-gray-400 flex items-center font-light">
             {{ date | displayDate }}
           </span>
@@ -29,7 +29,7 @@ layout: layouts/base.njk
         </span>
         </div>
       </div>
-      <div class="flex flex-col flex-grow markdown text-white">
+      <div class="flex flex-col article-content markdown text-white">
         {{ content | safe }}
       </div>
     </section>
