@@ -1,21 +1,21 @@
 {% for product in productList %}
 
-	<div class="p-4 bg-mydark-500 rounded-xl md:w-2/3 md:max-w-5xl w-full mb-5">
+	<div class="p-4 bg-mydark-500 rounded-xl md:w-4/5 md:max-w-5xl w-full mb-5 mx-auto">
 		<div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left p-3">
-			<img alt="team" class="flex-shrink-0 rounded-lg w-1/2 h-80 object-cover object-center sm:mb-0 mb-4" src="{{ product.image }}">
+			<img alt="team" class="flex-shrink-0 rounded-lg w-1/2 h-80 object-cover object-center sm:mb-0 mb-4" src="{{ product.data.image }}">
 			<div class="flex-grow sm:pl-8">
-				<h2 class="title-font font-medium text-xl text-white">{{ product.title }}</h2>
-				<h3 class="text-gray-300 font-medium">{{ product.subtitle }}</h3>
-				<h4 class="text-gray-300 font-light mb-3">{{ product.details }}</h4>
-				<p class="mb-4 text-gray-400">{{ product.description }}
+				<h2 class="title-font font-medium text-xl text-white">{{ product.data.title }}</h2>
+				<h3 class="text-gray-300 font-medium">{{ product.data.subtitle }}</h3>
+				<h4 class="text-gray-300 font-light mb-3">{{ product.data.details }}</h4>
+				<p class="mb-4 text-gray-400">{{ product.data.description }}
 					<ul class="tracking-wide text-gray-400 mb-5">
-						{% for item in product.features %}
+						{% for item in product.data.tags | displayTags %}
 							<li>{{ item }}</li>
 						{% endfor %}
 					</ul>
 				</p>
 				<a
-            href="{{ product.url }}" target='_blank'
+            href="{{ product.data.url }}" target='_blank'
             class="button"
           >
             Visit Project

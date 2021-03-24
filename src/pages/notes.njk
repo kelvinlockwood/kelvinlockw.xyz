@@ -14,7 +14,7 @@ banner:
     class="container sm:w-8/12 mx-auto w-full m-0 flex items-center justify-center"
   >
       <div class="pt-5">
-        {% set noteList = notes%}
+        {% set noteList = collections.note %}
         {% include "components/noteList.njk" %}
       </div>
     </section>

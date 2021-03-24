@@ -30,4 +30,4 @@ module.exports = {
     require('tailwindcss-debug-screens'),
   ],
   purge: ['./src/**/*.js', './src/**/*.njk', './src/**/*.svg'],
-}
+};

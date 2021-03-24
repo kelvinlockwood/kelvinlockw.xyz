@@ -11,7 +11,7 @@ banner:
 {% block body %}
 <section class="w-full py-4 bg-mydark-300 flex flex-col items-center  justify-center">
 
-        {% set productList = products %}
+        {% set productList = collections.product %}
         {% include "components/productList.njk" %}
 </section>
 {% endblock %}

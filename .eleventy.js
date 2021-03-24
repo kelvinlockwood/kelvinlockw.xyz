@@ -55,18 +55,19 @@ module.exports = (config) => {
   config.addNunjucksFilter('displayTags', function (tags) {
     // should match the list in tags.njk
     return (tags || []).filter(
-      (tag) => ['all', 'nav', 'note', 'article'].indexOf(tag) === -1
+      (tag) => ['all', 'nav', 'note', 'article', 'product'].indexOf(tag) === -1
     );
   });
   config.addNunjucksFilter('byTag', function (collection, tag) {
     // should match the list in tags.njk
-    return (collection || []).filter((i) =>
-      i.tags.some((t) => t.toLowerCase() == tag.toLowerCase())
-    );
-  });
-  config.addCollection('myCollectionName', function (collectionApi) {
-    // get unsorted items
-    return collectionApi.getAll();
+    if (!collection) {
+      return;
+    }
+    return collection.filter((i) => {
+      if (!i) return false;
+      if (!i.data.tags) return false;
+      return i.data.tags.some((t) => t.toLowerCase() == tag.toLowerCase());
+    });
   });
 
   return {
