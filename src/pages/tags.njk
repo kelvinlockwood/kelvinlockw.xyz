@@ -15,9 +15,9 @@ permalink: /tags/{{ tag }}/
 {% block body %}
   <main class="w-full bg-mydark-300 flex justify-center">
     <section
-    class="container sm:w-8/12 mx-auto w-full m-0 flex items-center justify-center"
+    class="container sm:w-8/12 w-full m-0 flex items-center justify-start"
   >
-      <div class="pt-5">
+      <div class="pt-5 flex-grow">
         {# data #}
         {% set articleList = collections.article | byTag(tag) %}
         {% set noteList = collections.note | byTag(tag) %}

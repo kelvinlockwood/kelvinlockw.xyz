@@ -52,6 +52,11 @@ module.exports = (config) => {
     const da = formatDay.format(d);
     return `${da} ${mo} ${ye}`;
   });
+  config.addNunjucksFilter('displayUrl', function (url) {
+    const pattern = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&=]*)/;
+    const ret = url.match(pattern);
+    return ret ? ret[0] : url;
+  });
   config.addNunjucksFilter('displayTags', function (tags) {
     // should match the list in tags.njk
     return (tags || []).filter(
