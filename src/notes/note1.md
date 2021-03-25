@@ -1,6 +1,6 @@
 ---
-url: matthiasott.com,
-title: Saving Your Web Workflows with Prototyping - ui,
-tags: [ui, ux, code]
-description: A brilliant post by Matthias Ott on common UI and design / engineering problems and how trying to solve them is often a greater lesson than only learning about a new technology. “Learning comes from exploring the problem space and trying different possible tradeoffs.”,
+url: https://www.ben-evans.com/benedictevans/2021/3/18/outgrowing-software
+title: Outgrowing software
+tags: [ecommerce]
+description: Benedict uses a *seagulls* analogy to explain how tech distrupts industries.
 ---
