@@ -39,7 +39,16 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="w-full container flex justify-center items-center">
+		{% for tag in collections.tagList | displayTags %}
+			<a
+						href="/tags/{{tag}}"
+            class="tag"
+          >
+				{{ tag }}
+			</a>
+		{% endfor %}
+	</div>
 	<div class="bg-opacity-75">
 		<div
           class="px-5 py-3 mx-auto flex items-center sm:flex-row flex-col justify-between"

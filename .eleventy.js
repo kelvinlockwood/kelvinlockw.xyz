@@ -74,7 +74,15 @@ module.exports = (config) => {
       return i.data.tags.some((t) => t.toLowerCase() == tag.toLowerCase());
     });
   });
+  // Create an array of all tags
+  config.addCollection('tagList', function (collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
+    });
 
+    return [...tagSet];
+  });
   return {
     templateFormats: ['md', 'njk', 'html'],
     markdownTemplateEngine: false,
