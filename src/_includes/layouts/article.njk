@@ -18,15 +18,15 @@ layout: layouts/base.njk
           </span>
         </div>
         <div class="flex flex-col items-start">
-          <span
-          class="mt-4 py-1 px-2 bg-mygray-500 rounded-xl text-gray-200 text-opacity-75 text-xs font-medium tracking-widest">
-          technology
-        </span>
-          <span
-          class="mt-4 py-1 px-2 bg-mygray-500 rounded-xl text-gray-200 text-opacity-75 text-xs font-medium tracking-widest"
-        >
-          ui-ux
-        </span>
+          {% for tag in tags | displayTags %}
+            <a
+						href="/tags/{{tag}}"
+            class="tag mt-4"
+          >
+              {{ tag }}
+            </a>
+          {% endfor %}
+
         </div>
       </div>
       <div class="flex flex-col article-content markdown text-white">
