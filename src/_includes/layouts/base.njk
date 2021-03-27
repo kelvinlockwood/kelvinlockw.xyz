@@ -15,10 +15,10 @@
     {% endif %}
     {% block body %}
       <div
-      class="py-8 m-0 bg-mydark-300"
+      class="m-0 bg-mydark-300"
     >
         {% if page.url == '/pages/about/' %}
-          <div class=" markdown container max-w-6xl">
+          <div class=" markdown py-10 container max-w-6xl">
             {{ content | safe }}
           </div>
         {% endif %}
