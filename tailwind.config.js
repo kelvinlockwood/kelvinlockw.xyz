@@ -17,6 +17,7 @@ module.exports = {
           500: '#14211e',
         },
         mygray: {
+          300: '#ababab',
           500: '#313E3D',
         },
       },

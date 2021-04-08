@@ -4,47 +4,38 @@
 "layouts/base.njk" %}
 {% block body %}
   <main>
-    <section class="text-gray-400 bg-mydark-500 body-font">
-      <div
-      class="container max-w-4xl mx-auto flex px-0 py-24 md:flex-row flex-col items-center"
-    >
-        <div
-        class="lg:flex-grow lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
-      >
-          <h1 class="title-font sm:text-3xl text-xl mb-4 font-black text-white">
-          I'm Kelvin Lockwood, a non-technical startup founder and jack of all
-          trades working on products, subscription services and marketplaces.
-        </h1>
+    <section class="text-gray-400 bg-mydark-500 body-font mb-32">
+      <div class="container max-w-4xl mx-auto flex mt-10 px-0 py-24 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow lg:pr-16 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font w-full sm:text-3xl text-xl mb-4 font-black text-white">
+            I'm Kelvin Lockwood, a non-technical startup founder and jack of all
+                                              trades working on products, subscription services and marketplaces.
+          </h1>
           <div class="flex items-center py-2">
-            <img src="/images/home/bx-chevron-down.svg" alt="chevron-down"/>
-            <small class="mx-1">Check out my work</small>
+            <small class="mx-1 text-gray-300 font-semibold">Check out my work</small>
+            <img class="text-gray-300 w-4" src="/images/home/bx-chevron-down.svg" alt="chevron-down"/>
           </div>
         </div>
         <div class="w-1/3 flex-shrink-0">
-          <img
-          class="object-cover object-center rounded"
-          alt="hero"
-          src="/images/home/Artboard 2.png"
-/>
+          <img class="object-cover object-center rounded" alt="hero" src="/images/home/Artboard 2.png"/>
         </div>
       </div>
     </section>
-
-    <section class="w-full text-gray-400 bg-mydark-100 body-font">
+    <section class="w-full text-gray-400 bg-gradient-to-b from-mydark-500 via-mydark-100 to-mydark-100 body-font">
       <div class="container py-24 px-0 max-w-5xl mx-auto">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-10 text-white">
-        Here's how I can help you
-      </h1>
+          Here's how I can help you
+        </h1>
         <div class="flex flex-wrap -m-2  mb-20">
           {% for s in services %}
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
               <div class="flex-grow text-left mt-6 sm:mt-0">
-                <img src="/images/icons/{{s.icon}}" alt="{{s.title}}"/>
+                <img class="w-9" src="/images/icons/{{ s.icon }}" alt="{{ s.title }}"/>
                 <h2 class="text-white text-lg title-font font-medium mb-2">
-                  {{s.title}}
+                  {{ s.title }}
                 </h2>
-                <p class="leading-relaxed text-base">
-                  {{s.details}}
+                <p class="leading-6 text-base">
+                  {{ s.details }}
                 </p>
               </div>
             </div>
