@@ -9,11 +9,11 @@ banner:
 ---
 
 {% block body %}
-  <main class="w-full bg-mydark-300 flex justify-center">
+  <main class="w-full bg-gradient-to-b from-mydark-500 via-mydark-300 to-mydark-300 flex justify-center">
     <section
-    class="container sm:w-8/12 mx-auto w-full m-0 flex items-center justify-center"
+    class="container sm:w-8/12 mx-auto w-5/6 m-0 flex items-center justify-center"
   >
-      <div class="pt-5 flex-grow">
+      <div class="pt-5 flex-grow width-full z-10">
         {% set articleList = collections.article %}
         {% include "components/articleList.njk" %}
       </div>
