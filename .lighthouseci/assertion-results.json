@@ -11,7 +11,7 @@
     "auditProperty": "accessibility",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/about/index.html"
+    "url": "http://localhost:56846/about/index.html"
   },
   {
     "name": "minScore",
@@ -25,7 +25,7 @@
     "auditProperty": "seo",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/about/index.html"
+    "url": "http://localhost:56846/about/index.html"
   },
   {
     "name": "minScore",
@@ -39,7 +39,7 @@
     "auditProperty": "accessibility",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/articles/index.html"
+    "url": "http://localhost:56846/articles/index.html"
   },
   {
     "name": "minScore",
@@ -53,7 +53,7 @@
     "auditProperty": "seo",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/articles/index.html"
+    "url": "http://localhost:56846/articles/index.html"
   },
   {
     "name": "minScore",
@@ -67,7 +67,7 @@
     "auditProperty": "accessibility",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/notes/index.html"
+    "url": "http://localhost:56846/notes/index.html"
   },
   {
     "name": "minScore",
@@ -81,7 +81,7 @@
     "auditProperty": "best-practices",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/notes/index.html"
+    "url": "http://localhost:56846/notes/index.html"
   },
   {
     "name": "minScore",
@@ -95,21 +95,21 @@
     "auditProperty": "seo",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/notes/index.html"
+    "url": "http://localhost:56846/notes/index.html"
   },
   {
     "name": "minScore",
     "expected": 0.9,
-    "actual": 0.87,
+    "actual": 0.86,
     "values": [
-      0.87
+      0.86
     ],
     "operator": ">=",
     "passed": false,
     "auditProperty": "performance",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/products/index.html"
+    "url": "http://localhost:56846/products/index.html"
   },
   {
     "name": "minScore",
@@ -123,7 +123,7 @@
     "auditProperty": "accessibility",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/products/index.html"
+    "url": "http://localhost:56846/products/index.html"
   },
   {
     "name": "minScore",
@@ -137,7 +137,7 @@
     "auditProperty": "best-practices",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/products/index.html"
+    "url": "http://localhost:56846/products/index.html"
   },
   {
     "name": "minScore",
@@ -151,6 +151,6 @@
     "auditProperty": "seo",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://localhost:56305/products/index.html"
+    "url": "http://localhost:56846/products/index.html"
   }
 ]
