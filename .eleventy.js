@@ -96,17 +96,6 @@ module.exports = (config) => {
     let lowReswebp = stats['webp'][0];
     let highReswebp = stats['webp'][1];
 
-    const srcset = Object.keys(stats).reduce(
-      (acc, format) => ({
-        ...acc,
-        [format]: stats[format].reduce(
-          (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-          ''
-        ),
-      }),
-      {}
-    );
-
     const source = `<source type="image/webp" media="(max-width: 629px)" srcset="${lowReswebp.url}" >
                     <source type="image/webp" media="(min-width: 630px)" srcset="${highReswebp.url}" >
                     <source type="image/jpeg" media="(max-width: 529px)" srcset="${lowestSrc.url}" >
