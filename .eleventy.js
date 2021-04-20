@@ -1,5 +1,7 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const Image = require('@11ty/eleventy-img');
 // const pluginRss = require('@11ty/eleventy-plugin-rss')
 // const markdownItAnchor = require('markdown-it-anchor');
 
@@ -24,6 +26,8 @@ const markdown = md({ html: true, breaks: true, linkify: true }).use(
   }
 );
 module.exports = (config) => {
+  config.addPlugin(pluginRss);
+
   config.addPassthroughCopy({ public: './' });
   // plugins
   config.addPlugin(eleventyNavigationPlugin);
@@ -74,6 +78,39 @@ module.exports = (config) => {
       return i.data.tags.some((t) => t.toLowerCase() == tag.toLowerCase());
     });
   });
+
+  config.addNunjucksAsyncShortcode('myImage', async (src, alt) => {
+    if (!alt) {
+      throw new Error(`Missing \`alt\` on Image from: ${src}`);
+    }
+
+    let stats = await Image(src, {
+      widths: [350, 808],
+      formats: ['jpeg', 'webp'],
+      urlPath: '/images/home/',
+      outputDir: '/images/home/',
+    });
+
+    let lowestSrc = stats['jpeg'][0];
+    let highResJpeg = stats['jpeg'][1];
+    let lowReswebp = stats['webp'][0];
+    let highReswebp = stats['webp'][1];
+
+    const source = `<source type="image/webp" media="(max-width: 629px)" srcset="${lowReswebp.url}" >
+                    <source type="image/webp" media="(min-width: 630px)" srcset="${highReswebp.url}" >
+                    <source type="image/jpeg" media="(max-width: 529px)" srcset="${lowestSrc.url}" >
+                    <source type="image/jpeg" media="(min-width: 630px)" srcset="${highResJpeg.url}" >`;
+
+    const img = `<img 
+                loading="lazy" 
+                alt="${alt}" 
+                width="${highResJpeg.width}"
+                height="${highResJpeg.height}"
+                src="${lowestSrc.url}">`;
+
+    return `<picture>${source}${img}</picture>`;
+  });
+
   // Create an array of all tags
   config.addCollection('tagList', function (collection) {
     let tagSet = new Set();
