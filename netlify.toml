@@ -6,9 +6,14 @@
 
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
+  package = "netlify-plugin-cypress"
 
 [[headers]]
   for = "*.avif"
     [headers.values]
       Content-Type = "image/avif"
       Content-Disposition = "inline"
+
+[build.environment]
+  CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+  TERM = "xterm"

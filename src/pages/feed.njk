@@ -1,0 +1,42 @@
+---
+permalink: "feed.xml"
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: Articles
+  order: 1
+metadata: {
+    title: "Kelvin Lockwood",
+    subtitle: "I'm Kelvin Lockwood, a non-technical startup founder and jack of all trades working on products, subscription services and marketplaces.",
+    url: "https://example.com/",
+    feedUrl: "https://pedantic-sinoussi-3efb9c.netlify.app/feed.xml",
+    author: {
+      name: "Kelvin Lockwwod",
+      email: "me@example.com"
+      }
+    }
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="pretty-feed-v3.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}/"/>
+  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.url }}/</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.posts %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <published>{{ post.data.published | rssDate }}</published>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.data.desc | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
