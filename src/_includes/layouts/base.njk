@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-      {% if page.url.includes('article') %}
-        <meta name="twitter:image" property="og:image" content="https://res.cloudinary.com/dyukcbbpg/image/upload/co_rgb:ecebeb,l_text:Georgia_85_bold_center:{{title}},x_0,y_-42/c_scale,g_south_east,l_uyrtha6wqg56kokboa98,w_166,x_25,y_25/v1618577502/mctocfhjo9bkq0fdusyh.png" />
-        <meta name="twitter:image:alt" property="og:image:alt" content="{{ site.meta.ogImgAlt }}" />
-        <meta property="og:description" content="I'm Kelvin Lockwood, a non-technical startup founder and jack of all trades working on products, subscription services and marketplaces." />
-      {% else %}
-        <meta name="twitter:image" property="og:image" content="https://res.cloudinary.com/dyukcbbpg/image/upload/c_scale,w_1266/c_scale,g_south_east,l_uyrtha6wqg56kokboa98,w_166,x_25,y_25/co_rgb:ffffff,l_text:Georgia_80_bold_center:Kelvin Lockwood/v1618577502/mctocfhjo9bkq0fdusyh.png" />
-        <meta name="twitter:image:alt" property="og:image:alt" content="{{ title }}" />
-      {% endif %}
+    {% if page.url.includes('article') %}
+      <meta name="twitter:image" property="og:image" content="https://res.cloudinary.com/dyukcbbpg/image/upload/c_scale,g_south_east,l_uyrtha6wqg56kokboa98,w_166,x_25,y_25/co_rgb:ffffff,l_text:Georgia_43_bold_center:{{title}}/v1618577502/mctocfhjo9bkq0fdusyh.png"/>
+      <meta name="twitter:image:alt" property="og:image:alt" content="{{ site.meta.ogImgAlt }}"/>
+      <meta property="og:description" content="I'm Kelvin Lockwood, a non-technical startup founder and jack of all trades working on products, subscription services and marketplaces."/>
+    {% else %}
+      <meta name="twitter:image" property="og:image" content="https://res.cloudinary.com/dyukcbbpg/image/upload/c_scale,w_1266/c_scale,g_south_east,l_uyrtha6wqg56kokboa98,w_166,x_25,y_25/co_rgb:ffffff,l_text:Georgia_53_bold_center:Kelvin Lockwood/v1618577502/mctocfhjo9bkq0fdusyh.png"/>
+      <meta name="twitter:image:alt" property="og:image:alt" content="{{ title }}"/>
+      <meta property="og:description" content="I'm Kelvin Lockwood, a non-technical startup founder and jack of all trades working on products, subscription services and marketplaces."/>
+    {% endif %}
     <link rel="stylesheet" href="/assets/main.bundle.css"/>
     <script src="/assets/main.bundle.js" defer></script>
     <title>{{ title }}
