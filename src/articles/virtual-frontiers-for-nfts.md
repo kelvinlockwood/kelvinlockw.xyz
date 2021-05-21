@@ -1,6 +1,6 @@
 ---
 title: Virtual Frontiers for NFTs
-description: Why Non-fugingle tokens have a big role to play in the Metaverse
+description: Why Non-fungible tokens have a big role to play in the Metaverse
 date: 2021-04-08
 tags:
   - decentraland
