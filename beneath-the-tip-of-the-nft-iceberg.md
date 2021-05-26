@@ -1,14 +1,15 @@
 ---
 title: Taking product builders beneath the tip of the ‘NFT iceberg’
 description: There is so much more to Non-fungible tokens than meets the eye
-date: 2021-04-18
+date: 2021-04-18T00:00:00.000Z
 tags:
   - blockchain
   - ethereum
   - nfts
 layout: layouts/article.njk
 banner:
-  description: NFTs have risen to prominence, but it's just the tip of the iceberg!
+  description: 'NFTs have risen to prominence, but it''s just the tip of the iceberg!'
+published: true
 ---
 The entire market capitalisation of cryptocurrency is now greater than $2 trillion. Meanwhile, Bitcoin has become the 6th largest currency in the world with more money in circulation than the British pound sterling.
 
@@ -52,4 +53,3 @@ Product builders should tread carefully when assessing the merits of Ethereum’
 Ethereum isn’t the only public blockchain offering smart contracts but it is where most NFT activity has taken place to date. The Decentralised Finance (DeFi) and NFT paradigms happened first on Ethereum for a reason. Whether you’re building a new product or seeking new opportunities, your chances of success are somewhat aligned with those who have gone before you, they have prepared the building blocks and often they win if you win. When considering Ethereum’s potential, with its extensibility, its convergence of DeFi legos and NFTs; keep MetaKovan’s analogy in mind.
 
 Since Ethereum has the greatest developer mindshare and the most mature building blocks, new product builders are only limited by their creativity! [Charged Particles](https://charged.fi/) is one of these creative building blocks, bridging DeFi and NFTs. The Charged Particles protocol enables all sorts of digital and physical assets, rights, revenue streams, incentives, and rules of engagement, to be programmed into an NFT. This will fuel an abundance of novel access, ownership and transferability use cases that just weren’t previously achievable. Or as Mark Cuban puts it [“Things that don’t have a way to be monetised right now can be monetised”](https://www.youtube.com/watch?v=XC2mRiNmyms). Strap in for the Charge!
-
