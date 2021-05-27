@@ -1,6 +1,6 @@
 ---
 title: How could ‘Everydays’ be unleashed in real world venues? 
-description: Everydays: the first 5000 Days
+description: 'Everydays: the first 5000 Days'
 date: 2021-05-10
 tags:
   - art
