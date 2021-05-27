@@ -1,5 +1,5 @@
 ---
-title: Bridging the gap between scarcity and equity: Initial NFT Offerings
+title: 'Bridging the gap between scarcity and equity: Initial NFT Offerings'
 description: Non-fungible tokens and equity tokens
 date: 2021-05-18
 tags:
