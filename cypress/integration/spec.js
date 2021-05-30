@@ -3,7 +3,7 @@ describe('Demo test', () => {
     cy.visit('/');
     cy.contains(
       'h1',
-      "I'm Kelvin Lockwood, a non-technical startup founder and jack of all trades working on products, subscription services and marketplaces."
+      "I'm Kelvin Lockwood, a non-technical startup founder and all-rounder on products, subscription services and marketplaces."
     ).should('be.visible');
   });
 });

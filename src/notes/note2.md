@@ -1,7 +1,7 @@
 ---
-url: matthiasott.com,
-showUrl: matthiasott.com
-title: Saving Your Web Workflows with Prototyping,
-tags: [ui, ux, design]
-description: A brilliant post by Matthias Ott on common UI and design / engineering problems and how trying to solve them is often a greater lesson than only learning about a new technology. “Learning comes from exploring the problem space and trying different possible tradeoffs.”,
+url: https://podcasts.apple.com/us/podcast/the-geopolitics-of-cryptocurrencies-with-niall-ferguson/id1498802610?i=1000522480570
+showUrl: profgalloway.com
+title: The Geopolitics of Cryptocurrencies
+tags: [cryptocurrency]
+description: Niall Ferguson shares his views on digital currencies from a geopolitical perspective.
 ---
