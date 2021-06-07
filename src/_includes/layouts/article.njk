@@ -14,7 +14,7 @@ layout: layouts/base.njk
 
             {% set wc = content | striptags | wordcount %}
             {% set wPerMinute = (wc / 200) + 1 %}
-            {{ wPerMinute | round }} min read.
+            {{ wPerMinute | round }} min read
           </span>
         </div>
         <div class="flex flex-col items-start">
