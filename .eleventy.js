@@ -115,8 +115,9 @@ module.exports = (config) => {
   config.addCollection('tagList', function (collection) {
     let tagSet = new Set();
     collection.getAll().forEach((item) => {
-      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
-    });
+      (item.data.tags || []).forEach((tag) => {
+        tagSet.add(tag.toLowerCase());
+      });
 
     return [...tagSet];
   });
