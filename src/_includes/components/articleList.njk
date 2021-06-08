@@ -16,7 +16,7 @@
         <a class="pb-5 text-mygray-300 text-opacity-75 text-xs font-medium tracking-widest" href="{{ article.url }}">
             Read more
         </a>
-        <div class="flex items-center flex-wrap mb-5 mt-auto w-full">
+        <div class="flex items-center flex-wrap mb-5 mt-auto w-full gap-y-2">
             {% for tag in article.data.tags | displayTags %}
                 <a href="/tags/{{ tag }}" class="tag">
                     {{ tag }}

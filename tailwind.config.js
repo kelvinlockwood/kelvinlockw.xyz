@@ -6,6 +6,9 @@ module.exports = {
       padding: '2rem',
     },
     extend: {
+      maxWidth: {
+        '59rem': '59rem',
+      },
       colors: {
         myred: {
           500: '#c44356',
