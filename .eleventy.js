@@ -57,7 +57,8 @@ module.exports = (config) => {
     return `${da} ${mo} ${ye}`;
   });
   config.addNunjucksFilter('displayUrl', function (url) {
-    const pattern = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&=]*)/;
+    const pattern =
+      /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&=]*)/;
     const ret = url.match(pattern);
     return ret ? ret[0] : url;
   });
@@ -118,6 +119,7 @@ module.exports = (config) => {
       (item.data.tags || []).forEach((tag) => {
         tagSet.add(tag.toLowerCase());
       });
+    });
 
     return [...tagSet];
   });
