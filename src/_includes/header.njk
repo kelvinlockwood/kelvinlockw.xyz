@@ -33,7 +33,7 @@
   >
     {% for item in collections.all | eleventyNavigation %}
       <a
-      class="block py-1 text-gray-200 text-opacity-90 hover:text-white {{ 'font-black' if page.url == item.url }}"
+      class="block py-1 text-gray-200 text-opacity-90 hover:text-white {{ 'font-extrabold' if page.url == item.url }}"
       href="{{ item.url | url }}"
     >
         {{ item.title }}
