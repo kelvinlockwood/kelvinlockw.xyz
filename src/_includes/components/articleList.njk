@@ -1,7 +1,7 @@
 {%- for article in articleList -%}
     <div class="article-width flex flex-col items-start mb-9" style="z-index:1">
         <div class="flex items-center justify-center">
-            <span class="py-1 text-gray-400 text-opacity-75 text-xs font-medium tracking-widest">
+            <span class="py-1 text-gray-400 text-opacity-80 text-xs font-medium tracking-widest">
                 {{ article.date | displayDate }}
             </span>
         </div>
@@ -13,7 +13,7 @@
         <p class="leading-relaxed mb-2">
             {{ article.data.banner.description }}
         </p>
-        <a class="pb-5 text-mygray-300 text-opacity-75 text-xs font-medium tracking-widest" href="{{ article.url }}">
+        <a class="pb-5 text-mygray-300 text-opacity-80 text-xs font-medium tracking-widest" href="{{ article.url }}">
             Read more
         </a>
         <div class="flex items-center flex-wrap mb-5 mt-auto w-full gap-y-2">
