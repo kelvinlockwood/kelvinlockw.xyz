@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name=“description” content=“Thoughts, ideas and advice on technology, web3, product development and startups.">
     {% if page.url.includes('article') %}
       <meta name="twitter:title" content="{{ title }}"/>
       <meta
@@ -50,7 +51,7 @@
       {% endif %}
     <link rel="stylesheet" href="/assets/main.bundle.css"/>
     <script src="/assets/main.bundle.js" defer></script>
-    <title>{{ title }} | Kelvin Lockwood's personal site</title>
+    <title>{{ title }}</title>
     {% block head %}{% endblock %}
   </head>
   <body class="text-white bg-mydark-500 {{ 'debug-screens' if env.devMode }}">
