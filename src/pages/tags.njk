@@ -35,9 +35,12 @@ permalink: /tags/{{ tag }}/
             <div class="border-b-2 border-mygray-500 my-5"></div>
           {% endif %}
         {% endif %}
-        {% include "components/productList.njk" %}
       </div>
     </section>
   </main>
+
+  <div class="pb-1">
+    {% include "components/productList.njk" %}
+  </div>
 
 {% endblock %}
