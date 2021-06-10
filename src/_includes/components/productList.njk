@@ -1,4 +1,4 @@
-{% for product in productList %}
+{% for product in productList|sort(attribute='data.details')  %}
 
 	<div class="p-4 bg-mydark-500 rounded-xl md:w-4/5 product w-full mb-5 mx-auto">
 		<div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left p-3">
