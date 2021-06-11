@@ -1,4 +1,4 @@
-{%- for article in articleList -%}
+{%- for article in articleList | sort(true, false, 'date') -%}
     <div class="article-width flex flex-col items-start mb-9" style="z-index:1">
         <div class="flex items-center justify-center">
             <span class="py-1 text-gray-400 text-opacity-80 text-xs font-medium tracking-widest">
