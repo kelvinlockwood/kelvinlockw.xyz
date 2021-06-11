@@ -6,6 +6,9 @@ module.exports = {
       padding: '2rem',
     },
     extend: {
+      textColor: {
+        white: '#fdecf0',
+      },
       maxWidth: {
         '59rem': '59rem',
       },

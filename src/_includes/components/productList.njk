@@ -7,13 +7,14 @@
 				<h2 class="title-font font-medium text-xl text-white">{{ product.data.title }}</h2>
 				<h3 class="text-gray-200 font-medium">{{ product.data.subtitle }}</h3>
 				<h4 class="text-gray-200 font-light mb-3">{{ product.data.details }}</h4>
-				<p class="mb-4 text-gray-300">{{ product.data.description }}
-					<ul class="tracking-wide sm:w-full text-left w-1/4 mx-auto text-gray-400 mb-5">
-						{% for item in product.data.tags | displayTags %}
-							<li>{{ item }}</li>
-						{% endfor %}
-					</ul>
-				</p>
+				<p class="mb-4 text-gray-300">{{ product.data.description }}</p>
+				<div class="flex items-center flex-wrap mb-5 mt-auto justify-center sm:justify-start w-full gap-y-2">
+					{% for item in product.data.tags | displayTags %}
+						<a href="/tags/{{ item }}" class="tag">
+							{{ item }}
+						</a>
+					{% endfor %}
+				</div>
 				<a
             href="{{ product.data.url }}" target='_blank'
             class="button"
