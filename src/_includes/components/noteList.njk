@@ -9,11 +9,12 @@
 				{{ note.data.showUrl | displayUrl }}
 			</a>
 		</div>
-		<h2
+		<a 
+			 href="{{ note.data.url }}" target="_blank"
           class="sm:text-2xl text-xl title-font font-medium text-white mt-1 mb-4"
         >
 			{{ note.data.title }}
-		</h2>
+		</a>
 		<p class="leading-relaxed mb-5">
 			{{ note.data.description }}
 		</p>
