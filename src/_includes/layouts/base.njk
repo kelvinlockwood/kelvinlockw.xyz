@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>"{{ title }}"</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="title" content="{{ title }}">
     <meta name=“description” content=“Thoughts, ideas and advice on technology, web3, product development and startups.">
     {% if page.url.includes('article') %}
       <meta name="twitter:title" content="{{ title }}"/>
       <meta
         name="twitter:description"
         content="Written by Kelvin Lockwood, a non-technical startup founder and digital all-rounder working on products, subscription services and marketplaces."/>
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://kelvinlockw.xyz/articles/">
+      <meta property="og:title" content="{{ title }}">
       <meta
         property="og:description"
         content="Written by Kelvin Lockwood, a non-technical startup founder and digital all-rounder working on products, subscription services and marketplaces."/>
